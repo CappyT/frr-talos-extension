@@ -7,8 +7,8 @@ COPY manifest.yaml /
 WORKDIR /rootfs
 
 # Copy FRR binaries from the official image
-COPY --from=quay.io/frrouting/frr:v10.4.1 /usr/lib/frr/fabricd usr/lib/frr/
-COPY --from=quay.io/frrouting/frr:v10.4.1 /usr/lib/frr/watchfrr usr/lib/frr/
+COPY --from=quay.io/frrouting/frr:10.4.1 /usr/lib/frr/fabricd usr/lib/frr/
+COPY --from=quay.io/frrouting/frr:10.4.1 /usr/lib/frr/watchfrr usr/lib/frr/
 
 # Copy FRR configuration
 COPY daemons etc/frr/
